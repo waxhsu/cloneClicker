@@ -1,0 +1,100 @@
+.Roles{
+    min-height: 60vh;
+    min-width: 60%;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    }
+  
+  .roleGrid {
+    border: 2px red solid;
+    display: flex;
+    justify-content: center;
+    padding: 0 7.5% 0 7.5%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* filter: brightness(50%); */
+  }
+  
+  
+  .roleContainer{
+    position: relative;
+    width: 80%;
+    max-width: 30%;
+    margin: 2.5%;
+    /* border: 1px blue solid; */
+    background: rgba(236, 236, 236, 0.6);
+    padding: 0 1vh 1vh 1vh;
+    margin-bottom: 1vh;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px;
+  }
+  
+  
+  .rolePreview {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    /* border: 1px green solid; */
+    margin: 10%;
+    border-radius: 20px;
+  }
+  
+  .projectPreview .contentOverlay {
+    background: rgba(236, 236, 236, 0.9);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .projectPreview:hover .contentOverlay {
+    opacity: 1;
+  }
+  
+  .contentImage {
+    width: 50%;
+    display: block;
+  }
+  
+  .contentDetails {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    color: black;
+    font-family: AvenirNext-Regular;
+    letter-spacing: -0.38px;
+    font-weight: 600;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .projectPreview:hover .contentDetails {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .fadeInBottom {
+    top: 80%;
+  }
+  
+  
+  
