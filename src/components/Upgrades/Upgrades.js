@@ -6,7 +6,7 @@ export const Upgrades = () => {
     const [number, setNumber] = useState(0) //this is an react hook
   return (
     <div>
-        <h1>CLONING UPGRADESS</h1>
+        <h1>UPGRADES SECTION</h1>
         {/* <img onClick = {() => setNumber(number+1)} src={CLICK} /> */}
         {/* <h2>{number}</h2> */}
     </div>

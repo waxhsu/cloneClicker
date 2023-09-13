@@ -9,7 +9,7 @@ function App() {
     <div className="App">
         <Clicker />
         {/* <Stats /> */}
-        <Upgrades />
+        {/* <Upgrades /> */}
     </div>
   );
 }
