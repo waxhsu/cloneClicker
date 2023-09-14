@@ -104,3 +104,16 @@ export const NOTIFICATIONS = [
   },
   
 ]
+
+export const UPGRADES = [
+  {
+    src: icon_placeholder,
+    name: `Try harder`,
+    cost: `10 fucks`,
+  },
+  {
+    src: icon_placeholder,
+    name: `Try even harder`,
+    cost: `50 fucks`,
+  },
+]

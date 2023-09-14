@@ -8,7 +8,7 @@ export const Stats = (props) => {
     <div>
       <div className='appStats'>
         <h2>Total Applications: {totalClicks}</h2>
-        <h3>Motivation: {totalClicks*.01} fucks</h3>
+        <h3>f*cks left to give: {totalClicks*.51}</h3>
       </div>
 
     </div>

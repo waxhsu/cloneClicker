@@ -18,9 +18,9 @@ function App() {
             setNumber (number+1)
           }} />
           <Stats totalClicks={number} />
-          <Notifications />
+          {/* <Notifications /> */}
+          <Upgrades />
         </div>
-        {/* <Upgrades /> */}
     </div>
   );
 }

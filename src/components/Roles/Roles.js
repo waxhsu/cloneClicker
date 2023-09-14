@@ -13,7 +13,7 @@ export const Stats = () => {
                         <img className='contentImage' src={role.src} alt='' />
                     </div>
                     <div className='roleDetailColumn'>
-                        <h2>{role.title}</h2>
+                        <h2>{role.name}</h2>
                         <h4>{role.companyName} • {role.pay}</h4>
                         <h4>{role.desc}</h4>
                     </div>
