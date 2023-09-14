@@ -1,5 +1,7 @@
 .App {
   display: flex;
+  border: green solid 2px;
+  max-height: 100%;
 }
 
 .rightUI {

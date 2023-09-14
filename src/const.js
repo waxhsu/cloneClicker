@@ -1,4 +1,6 @@
-import icon_placeholder from './img/billiards_back_animated.gif';
+import icon_placeholder from './img/company_icon.png';
+import email_placeholder from './img/email.png';
+
 
 export const ROLES = [
   {
@@ -6,47 +8,99 @@ export const ROLES = [
     title: `Generalist`,
     companyName: `SyncedIn`,
     pay: `$69K/yr`,
-    desc: `short desc`,
+    desc: `hehe lol`,
   },
-//   {
-//     name: `Ugly Hands Club`,
-//     src: projects_placeholder,
-//     desc: `Webstore specialized in climbing gear`,
-//     class: `Webstore`,
-//     year: `2023`,
-//   },
-//   {
-//     name: `AVRG service`,
-//     src: projects_placeholder,
-//     desc: `A dry humor website because haha lol`,
-//     class: `Dry humor`,
-//     year: `2023`,
-//   },
-//   {
-//     name: `Project 4`,
-//     src: projects_placeholder,
-//     desc: `Lorem ipsum something about pixel art that I drew because I want to`,
-//     class: `Pixel art/Graphic design`,
-//     year: `2022`,
-//   },
-  
-  // {
-  //   name: `Three Man dice game`,
-  //   src: projects_placeholder,
-  //   desc: `A classic Taiwanese dice game where you try to not be the 3-man`,
-  // },
+  {
+    src: icon_placeholder,
+    title: `Junior Analyst`,
+    companyName: `Microsooft`,
+    pay: `$19K/yr`,
+    desc: `analyze junior sutff`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Generalist`,
+    companyName: `SyncedIn`,
+    pay: `$69K/yr`,
+    desc: `hehe lol`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Junior Analyst`,
+    companyName: `Microsooft`,
+    pay: `$19K/yr`,
+    desc: `analyze junior sutff`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Generalist`,
+    companyName: `SyncedIn`,
+    pay: `$69K/yr`,
+    desc: `hehe lol`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Junior Analyst`,
+    companyName: `Microsooft`,
+    pay: `$19K/yr`,
+    desc: `analyze junior sutff`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Generalist`,
+    companyName: `SyncedIn`,
+    pay: `$69K/yr`,
+    desc: `hehe lol`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Junior Analyst`,
+    companyName: `Microsooft`,
+    pay: `$19K/yr`,
+    desc: `analyze junior sutff`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Generalist`,
+    companyName: `SyncedIn`,
+    pay: `$69K/yr`,
+    desc: `hehe lol`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Junior Analyst`,
+    companyName: `Microsooft`,
+    pay: `$19K/yr`,
+    desc: `analyze junior sutff`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Generalist`,
+    companyName: `SyncedIn`,
+    pay: `$69K/yr`,
+    desc: `hehe lol`,
+  },
+  {
+    src: icon_placeholder,
+    title: `Junior Analyst`,
+    companyName: `Microsooft`,
+    pay: `$19K/yr`,
+    desc: `analyze junior sutff`,
+  },
   
 ]
 
 
-// export const ABOUT = [
-//   {
-//     name: `paragraph1`,
-//     desc: `something about discipline and BEING FRICKING SELF-TAUGHT`,
-//   },
-//   {
-//     name: `paragraph2`,
-//     desc: `other interesting stuff like: DANCING // TERRARIUM // PIXEL ART // PRODUCTIVITY COACHING`,
-//   },
+export const NOTIFICATIONS = [
+  {
+    src: email_placeholder,
+    title: `You've got mail!`,
+    desc: `Thank you for applying! We are sorry to...`,
+  },
+  {
+    src: email_placeholder,
+    title: `SyncedIn Career`,
+    desc: `Sign up to SyncedIn Premium for a.. `,
+  },
   
-// ]
+]

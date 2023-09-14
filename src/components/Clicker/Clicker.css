@@ -1,9 +1,17 @@
+.Clicker {
+    border: 2px blueviolet solid;
+    min-height: 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+
 .apply {
     -webkit-filter: brightness(100%);
 }
 
 .easyApply {
-    max-width: 35%;
+    width: 100%;
+    margin: 5% 0 5% 0;
 }
 
 .apply:hover {
