@@ -1,43 +1,35 @@
-import { click } from '@testing-library/user-event/dist/click';
+// import { click } from '@testing-library/user-event/dist/click';
 import './App.css';
-import Clicker from './components/Clicker/Clicker.js'
+// import Clicker from './components/Clicker/Clicker.js'
 // import Notifications from './components/Notifications/Notifications.js'
-import Roles from './components/Roles/Roles.js'
-import Stats from './components/Stats/Stats.js'
-import Upgrades from './components/Upgrades/Upgrades.js'
+// import Roles from './components/Roles/Roles.js'
+// import Stats from './components/Stats/Stats.js'
+// import Upgrades from './components/Upgrades/Upgrades.js'
 import React, { useState } from 'react'
+import apply from './img/easyapply.png'
 
-function App() {
-  const [number, setNumber] = useState(0);
-  const [clickMultiplier, setClickMultiplier] = useState(1);
-  const buyUpgrade = () => {
-    // Implement logic to buy an upgrade and increase the clickMultiplier
-    // For example, you can deduct some cookies and double the clickMultiplier
-    const upgradeCost = 10; // Adjust the cost as needed
-    if (number >= upgradeCost) {
-      setNumber(number - upgradeCost);
-      setClickMultiplier(clickMultiplier * 2);
-    }
+const App = () => {
+  const [applications, setApplications] = useState(0);
+
+  const handleClick = () => {
+    setApplications(applications + 1);
   };
+
   return (
-    <div className="App">
-        <Roles />
-        
-        <div className='rightUI'>
-          <Clicker increaseNum={ () => {
-            setNumber (number+clickMultiplier)
-          }} />
-
-
-          <Stats totalClicks={number}/>
-
-
-
-          {/* <Notifications /> */}
-          <Upgrades decreaseNum= { () => {setNumber (number-1)}}/>
-        </div>
+    <div>
+      <h1>You Got Laid Off</h1>
+      <div className="app-container">
+        <img
+          src={apply} // Replace with the path to your cookie image
+          onClick={handleClick}
+          className="apply"
+        />
+      </div>
+      <div className="application-count">
+        <h1>Total Applications: {applications}</h1>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
