@@ -6,6 +6,7 @@ export const Stats = () => {
   return (
     <div className="Roles">
     <div className="roleGrid">
+    <h2>Job Postings</h2>
     {ROLES.map((role) => {
         return (
             <div className='roleContainer'>
@@ -13,9 +14,8 @@ export const Stats = () => {
                         <img className='contentImage' src={role.src} alt='' />
                     </div>
                     <div className='roleDetailColumn'>
-                        <h2>{role.name}</h2>
-                        <h4>{role.companyName} • {role.pay}</h4>
-                        <h4>{role.desc}</h4>
+                        <h3>{role.title}</h3>
+                        <h4>{role.companyName}</h4>
                     </div>
             </div>
         );

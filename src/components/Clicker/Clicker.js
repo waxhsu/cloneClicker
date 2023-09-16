@@ -4,8 +4,8 @@ import CLICK from '../../img/easyapply.png'
 
 
 
-export const Clicker = (props) => {
-  const {increaseNum} = props
+export const Clicker = (increase) => {
+  const {increaseNum} = increase;
   return (
     <div className='Clicker'>
         <div className='apply'>
