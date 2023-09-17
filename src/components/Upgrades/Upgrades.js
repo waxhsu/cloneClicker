@@ -1,30 +1,22 @@
-import React, { useState } from 'react' //importing react and useState
-import CLICK from '../../img/billiards_back_animated.gif'
-import './Upgrades.css';
-import { UPGRADES } from '../../const.js';
-import UPGRADE from '../../img/upgrade.png'
+// Upgrades.js
+import React from 'react';
 
-export const Upgrades = (upgrade) => {
-  const {decreaseNum} = upgrade;
+function Upgrades({ motivation, clickMultiplier, setClickMultiplier, updateMotivation }) {
+  const upgradeClickMultiplier = () => {
+    if (motivation >= 10) {
+      // Deduct 10 motivation points and increase the click multiplier by 1
+      updateMotivation(10); // Use the updateMotivation function to deduct motivation
+      setClickMultiplier(clickMultiplier + 1);
+    }
+  };
+
   return (
-    <div className="Upgrades">
-        <h2>Productivity Store</h2>
     <div>
-    <div className="upgradeGrid">
-            <div className='upgradeContainer' onClick = {() => decreaseNum()} src={UPGRADE}>
-          <div className='tryHarder'>
-            <img className= 'Upgrade' src={UPGRADE} /> Try Harder 10 f*cks
-          </div>
-            </div>
-
-
-
-
+      <h2>Upgrades</h2>
+      <p>Click Multiplier: {clickMultiplier}x</p>
+      <button onClick={upgradeClickMultiplier}>Upgrade Click Multiplier (Cost: 10 Motivation)</button>
     </div>
-</div>
-
-    </div>
-  )
+  );
 }
 
 export default Upgrades;
