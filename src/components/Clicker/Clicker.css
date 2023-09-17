@@ -1,31 +1,16 @@
-.Clicker {
-    border: 2px blueviolet solid;
-    min-height: 33.333%;
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-
+.application-container {
+    text-align: center;
+    margin-top: 50px;
 }
-
-.apply {
-    -webkit-filter: brightness(100%);
+  
+.application {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
 }
-
-.easyApply {
-    width: 100%;
-    margin: 5% 0 5% 0;
-}
-
-.apply:hover {
-    -webkit-filter: brightness(70%);
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.apply:active {
-    vertical-align: top;
-    padding: 2%;
+  
+.application-count {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
 }
