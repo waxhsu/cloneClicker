@@ -1,68 +1,32 @@
 import React, { useState } from 'react';
 import './App.css';
-import ApplyButton from './components/Apply/Apply.js'; 
-
-import MotivationDisplay from './components/Stats/Stats.js';
-import Upgrades from './components/Upgrades/Upgrades.js'; 
-import AutoFarm from './components/Autofarm/Autofarm.js';
-
-
+import CookieButton from './components/Apply/Apply.js';
+import StatsDisplay from './components/Statsdisplay/Statsdisplay.js'; // Import the new component
 
 function App() {
-  const [Apps, setApps] = useState(0);
-  const [motivation, setMotivation] = useState(0);
-  const [clickMultiplier, setClickMultiplier] = useState(1);
-  const [autoMultiplier, setAutoMultiplier] = useState(1);
-  const addApps = (amount) => {
-    setApps(Apps + amount);
-  };
-  
+  // State to track the number of cookies and currency
+  const [cookies, setCookies] = useState(0);
+  const [currency, setCurrency] = useState(0);
 
-  const handleApplyClick = () => {
-    // Increase the number of cookies based on the click multiplier
-    setApps(Apps + clickMultiplier);
-    // Increase motivation based on the number of cookies clicked (e.g., 10 motivation for every 100 cookies)
-    if ((Apps + 1) % 1 === 0) {
-      setMotivation(motivation + 0.82);
-    }
-  };
+  // Function to handle cookie clicking
+  const handleCookieClick = () => {
+    // Increase the number of cookies by 1 when clicked
+    setCookies(cookies + 1);
 
-  // Function to update motivation when upgrades are purchased
-  const updateMotivation = (cost) => {
-    if (motivation >= cost) {
-      setMotivation(motivation - cost);
+    // Increase the currency by 1 for every 10 cookies clicked
+    if ((cookies + 1) % 10 === 0) {
+      setCurrency(currency + 1);
     }
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>You Got Laid Off</h1>
-        <p>Total Applications: {Apps}</p>
-
-
-        <ApplyButton 
-          onClick={handleApplyClick} 
-        />
-        
-        <MotivationDisplay
-          motivation={motivation} 
-        />
-        
-        <Upgrades
-          motivation={motivation}
-          clickMultiplier={clickMultiplier}
-          setClickMultiplier={setClickMultiplier}
-          updateMotivation={updateMotivation} // Pass the updateMotivation function
-          setAutoMultiplier={setAutoMultiplier} // Pass setAutoMultiplier function
-          autoMultiplier={autoMultiplier} // Pass autoMultiplier state
-        />
-
-        <AutoFarm 
-          autoMultiplier={autoMultiplier}
-          addCookies={addApps}
-        />
-
+        <h1>Cookie Clicker</h1>
+        {/* Use the StatsDisplay component */}
+        <StatsDisplay cookies={cookies} currency={currency} />
+        {/* Use the CookieButton component */}
+        <CookieButton onClick={handleCookieClick} />
       </header>
     </div>
   );
