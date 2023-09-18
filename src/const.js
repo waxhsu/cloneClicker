@@ -57,14 +57,18 @@ export const NOTIFICATIONS = [
 ]
 
 export const UPGRADES = [
-  {
-    src: icon_placeholder,
-    name: `Try harder`,
-    cost: `10 fucks`,
-  },
-  {
-    src: icon_placeholder,
-    name: `Try even harder`,
-    cost: `50 fucks`,
-  },
-]
+  { label: "Upgrade Click Multiplier (Cost: 10 Motivation)",
+    cost: 10,
+    increase: 1 },
+
+  { label: "Upgrade Auto-Clicker (Cost: 20 Motivation)", 
+    cost: 20,
+    increase: 5
+    },
+
+  { label: "Upgrade Cookie Factory (Cost: 50 Motivation)", 
+    cost: 50, 
+    increase: 25
+    },
+  // Add more upgrade options as needed
+];

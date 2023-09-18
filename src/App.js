@@ -4,7 +4,7 @@ import ApplyButton from './components/Apply/Apply.js';
 
 import MotivationDisplay from './components/Stats/Stats.js';
 import Upgrades from './components/Upgrades/Upgrades.js'; 
-
+import AutoFarm from './components/Autofarm/Autofarm.js';
 
 
 
@@ -12,6 +12,11 @@ function App() {
   const [Apps, setApps] = useState(0);
   const [motivation, setMotivation] = useState(0);
   const [clickMultiplier, setClickMultiplier] = useState(1);
+  const [autoMultiplier, setAutoMultiplier] = useState(1);
+  const addApps = (amount) => {
+    setApps(Apps + amount);
+  };
+  
 
   const handleApplyClick = () => {
     // Increase the number of cookies based on the click multiplier
@@ -34,18 +39,30 @@ function App() {
       <header className="App-header">
         <h1>You Got Laid Off</h1>
         <p>Total Applications: {Apps}</p>
-        <ApplyButton onClick={handleApplyClick} />
-        
-        {/* Use the MotivationDisplay component to display motivation */}
-        <MotivationDisplay motivation={motivation} />
 
-        {/* Use the Upgrades component to handle upgrades */}
+
+        <ApplyButton 
+          onClick={handleApplyClick} 
+        />
+        
+        <MotivationDisplay
+          motivation={motivation} 
+        />
+        
         <Upgrades
           motivation={motivation}
           clickMultiplier={clickMultiplier}
           setClickMultiplier={setClickMultiplier}
           updateMotivation={updateMotivation} // Pass the updateMotivation function
+          setAutoMultiplier={setAutoMultiplier} // Pass setAutoMultiplier function
+          autoMultiplier={autoMultiplier} // Pass autoMultiplier state
         />
+
+        <AutoFarm 
+          autoMultiplier={autoMultiplier}
+          addCookies={addApps}
+        />
+
       </header>
     </div>
   );

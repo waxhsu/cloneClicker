@@ -1,12 +1,20 @@
 // Upgrades.js
-import React from 'react';
+import React, { useState } from 'react';
+import { UPGRADES } from '../../const.js'
 
 function Upgrades({ motivation, clickMultiplier, setClickMultiplier, updateMotivation }) {
-  const upgradeClickMultiplier = () => {
-    if (motivation >= 10) {
-      // Deduct 10 motivation points and increase the click multiplier by 1
-      updateMotivation(10); // Use the updateMotivation function to deduct motivation
-      setClickMultiplier(clickMultiplier + 1);
+  // State to track the number of upgrades purchased
+  const [upgradeCount, setUpgradeCount] = useState(0);
+
+  // List of available upgrades and their costs
+
+  // Function to handle upgrading
+  const handleUpgrade = (upgrade) => {
+    if (motivation >= upgrade.cost) {
+      // Deduct motivation and apply the upgrade
+      updateMotivation(upgrade.cost);
+      setClickMultiplier(clickMultiplier + upgrade.increase);
+      setUpgradeCount(upgradeCount + 1);
     }
   };
 
@@ -14,9 +22,19 @@ function Upgrades({ motivation, clickMultiplier, setClickMultiplier, updateMotiv
     <div>
       <h2>Upgrades</h2>
       <p>Click Multiplier: {clickMultiplier}x</p>
-      <button onClick={upgradeClickMultiplier}>Upgrade Click Multiplier (Cost: 10 Motivation)</button>
+      <p>Upgrades Purchased: {upgradeCount}</p>
+      <ul>
+        {UPGRADES.map((upgrade, index) => (
+          <li key={index}>
+            <button onClick={() => handleUpgrade(upgrade)} disabled={motivation < upgrade.cost}>
+              {upgrade.label}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 export default Upgrades;
+
