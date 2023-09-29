@@ -1,37 +1,32 @@
-// const.js
-const upgrades = [
+export const autoClickerOptions = [
   {
     id: 1,
-    name: 'Click Multiplier',
-    cost: 1,
-    clickMultiplier: 2, // Increase the click multiplier by 2
-    description: 'Increase your click power. Clicks generate more cookies.',
+    name: "AutoClicker 1",
+    cost: 10,
+    clicksPerSecond: 1,
   },
   {
     id: 2,
-    name: 'Cursor',
-    cost: 5,
-    clickRate: 20,
-    description: 'Automatically clicks once per second.',
-    multiplier: 20,
+    name: "AutoClicker 2",
+    cost: 50,
+    clicksPerSecond: 5,
   },
   {
     id: 3,
-    name: 'Grandma',
-    cost: 50,
-    clickRate: 5,
-    description: 'Grandma bakes cookies for you. +5 cookies per second.',
-    multiplier: 5,
+    name: "AutoClicker 3",
+    cost: 100,
+    clicksPerSecond: 10,
   },
   {
     id: 4,
-    name: 'Factory',
-    cost: 200,
-    clickRate: 20,
-    description: 'Cookie production is automated. +20 cookies per second.',
-    multiplier: 20,
+    name: "AutoClicker 4",
+    cost: 500,
+    clicksPerSecond: 50,
   },
-  // Add more upgrades as needed
+  {
+    id: 5,
+    name: "AutoClicker 5",
+    cost: 1000,
+    clicksPerSecond: 100,
+  },
 ];
-
-export default upgrades;

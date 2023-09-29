@@ -22,3 +22,16 @@ button {
   cursor: pointer;
   margin-top: 20px;
 }
+
+
+
+.autoClicker {
+  display: flex;
+  border: yellow solid 1px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.autoClickerOptions {
+  border: green solid 1px;
+}
