@@ -1,10 +1,14 @@
+// Clicker.js
 import React from 'react';
 
-function Clicker({ onClick, cookies }) {
+function Clicker({ setCookies }) {
+  const handleCookieClick = () => {
+    setCookies((prevCookies) => prevCookies + 1);
+  };
+
   return (
     <div>
-      <p>Cookies: {cookies}</p>
-      <button onClick={onClick}>Click Me!</button>
+      <button onClick={handleCookieClick}>Click Me!</button>
     </div>
   );
 }

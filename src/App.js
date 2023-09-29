@@ -5,17 +5,18 @@ import AutoClicker from './components/AutoClicker.js';
 
 function App() {
   const [cookies, setCookies] = useState(0);
-
-  const handleCookieClick = () => {
-    setCookies(cookies + 1);
-  };
-
+  const [autoCookies, setAutoCookies] = useState(0);
+  
   return (
     <div className="App">
       <header className="App-header">
         <h1>Cookie Clicker</h1>
-        <Clicker onClick={handleCookieClick} cookies={cookies} />
-        <AutoClicker cookies={cookies} setCookies={setCookies} />
+        <p>Cookies: {cookies}</p>
+        <p>AutoCookies: {autoCookies}</p>
+        <p>TotalCookies: {autoCookies + cookies}</p>
+
+        <Clicker setCookies={setCookies} />
+        <AutoClicker autoCookies={autoCookies} setAutoCookies={setAutoCookies} />
       </header>
     </div>
   );
