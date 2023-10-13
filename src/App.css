@@ -1,9 +1,6 @@
 .App {
-  text-align: center;
-}
-
-.App-header {
   background-color: #282c34;
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,15 +20,3 @@ button {
   margin-top: 20px;
 }
 
-
-
-.autoClicker {
-  display: flex;
-  border: yellow solid 1px;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.autoClickerOptions {
-  border: green solid 1px;
-}
